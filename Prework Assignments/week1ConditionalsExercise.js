@@ -228,7 +228,11 @@ function exercise8(amount1, amount2, minimum, maximum) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-  
+  if (minimum<amount1<maximum && minimum<amount2<maximum){
+    answer8 = true;
+  }else{
+    answer8 = false;
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
@@ -247,7 +251,12 @@ function exercise9(item) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  var type = typeof(item);
+  if(type=="number"){
+    answer9 = exercise7(item);
+  }else{
+    answer9 = "Please send a number, that was a " +type;
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
@@ -270,7 +279,15 @@ function exercise10(num10) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-
+  if(num10%3 == 0){
+    answer10 == "Fizz";
+  }else if(num10%5 == 0){
+    answer10 == "Buzz";
+  }else if(num10%15 == 0){
+    answer10 == "Fizz Buzz";
+  }else{
+    answer10 == num10;
+  }
   // --------------------------------------------
   // And above here
   // --------------------------------------------
@@ -283,3 +300,4 @@ function exercise10(num10) {
 //
 
 // Email your file to us or commit your file to GitHub and email us a link.
+
