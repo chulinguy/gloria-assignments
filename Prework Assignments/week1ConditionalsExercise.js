@@ -162,12 +162,8 @@ function exercise6(varA, varB, varC) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-  if(varA==varB){
-    if(varA != varC || varB!= varC){
-      answer6 = true;
-    }else{
-      answer6 = false;
-    }
+  if(varA==varB && (varA != varC || varB!= varC)){
+    answer6 = true;
   }else{
     answer6 = false;
   }
@@ -197,16 +193,16 @@ function exercise7(num7) {
   // Write your code for the exercise below here:
   // --------------------------------------------
   switch(num7){
-    case num7 == 1:
+    case 1:
       answer7 = "You won!";
       break;
-    case num7 == 7:
+    case 7:
       answer7 = "You are lucky!";
       break;
-    case num7 == 101:
+    case 101:
       answer7 = "Welcome to coding 101!";
       break;
-    case num7 == 1000000:
+    case 1000000:
       answer7 = "You are one in a million!"
       break;
     default:
@@ -217,6 +213,7 @@ function exercise7(num7) {
   // --------------------------------------------
   return answer7;
 }
+console.log(exercise7(7));
 
 // EXERCISE 8.
 // Using any conditional assign the value of true to answer8 if:

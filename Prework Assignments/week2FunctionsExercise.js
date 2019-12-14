@@ -12,23 +12,34 @@
 
 // Exercise 1. Define a function called logGreeting() that prints the string “Hello!” (use console.log). 
 // Underneath the function, write the line of code that runs the function. 
-
+function logGreeting(){
+    console.log("Hello!");
+}
 
 // Exercise 2. Define a function called getName() that *returns* a string that is your name. 
 // Remember, this function should return the string -- not print it.
 // Then print your name in the console by passing getName() into the console.log() function. 
-
-
+function getName(){
+    return "Gloria";
+}
+console.log(getName);
 // Exercise 3. Call a function within a function -- Write a function called logGreeting2() 
 // that prints a full sentence that contains your name: "Hello! My name is <name>."
 // logGreeting2 should call myName() to get your name.
 // Then print your greeting to the console by calling logGreeting2(). 
-
+function logGreeting2(){
+    console.log("Hello! My name is "+getName());
+}
 
 // Exercise 4. Write a function that takes 3 parameters that are all numbers.
 // The function should return the sum of the 3 numbers.
 // Then write some function calls you would use to test your function.
-
+function sumOfThreeNums(num1, num2, num3){
+    return num1+num2+num3;
+}
+function addingNums(){
+    console.log(sumOfThreeNums(1,2,3));
+}
 
 // Exercise 5. Let's say a museum gives a discount for children ages 14 or under, and seniors 65 or older.
 // Write a function that takes in a person's age and returns true if they should get a discount.

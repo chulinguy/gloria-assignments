@@ -71,12 +71,12 @@ var myAnswerForExercise10 = "string";
 // Exercise 11. What is the data type of the value stored in 'product',
 // place your answer in the quotes below:
 
-var myAnswerForExercise11 = "integer";
+var myAnswerForExercise11 = "number";
 
 // Exercise 12. What do you think the value of emptyVariable is?
 // Place your answer below:
 
-var myAnswerForExercise12 = "null";
+var myAnswerForExercise12 = "undefined";
 
 // Exercise 13. If
 var A = "R";
@@ -85,7 +85,7 @@ var C = 4;
 var D = "D";
 
 // What is the value of B + C
-var myAnswerForExercise13 = "4";
+var myAnswerForExercise13 = "5";
 
 // Exercise 14 What is the value of
 // A + "n" + D
