@@ -15,14 +15,14 @@
 function logGreeting(){
     console.log("Hello!");
 }
-
+logGreeting();
 // Exercise 2. Define a function called getName() that *returns* a string that is your name. 
 // Remember, this function should return the string -- not print it.
 // Then print your name in the console by passing getName() into the console.log() function. 
 function getName(){
     return "Gloria";
 }
-console.log(getName);
+console.log(getName());
 // Exercise 3. Call a function within a function -- Write a function called logGreeting2() 
 // that prints a full sentence that contains your name: "Hello! My name is <name>."
 // logGreeting2 should call myName() to get your name.
@@ -30,7 +30,7 @@ console.log(getName);
 function logGreeting2(){
     console.log("Hello! My name is "+getName());
 }
-
+logGreeting2();
 // Exercise 4. Write a function that takes 3 parameters that are all numbers.
 // The function should return the sum of the 3 numbers.
 // Then write some function calls you would use to test your function.
@@ -40,17 +40,32 @@ function sumOfThreeNums(num1, num2, num3){
 function addingNums(){
     console.log(sumOfThreeNums(1,2,3));
 }
-
+addingNums();
 // Exercise 5. Let's say a museum gives a discount for children ages 14 or under, and seniors 65 or older.
 // Write a function that takes in a person's age and returns true if they should get a discount.
 // Otherwise it should return false.
 // Then write some function calls you would use to test your function.
-
-
+function determineDiscounts(personAge){
+    if(personAge<=14 || personAge>=65){
+        return true;
+    }else{
+        return false;
+    }
+}
+function givingDiscount(personAge){
+    if(determineDiscounts(personAge)===true){
+        console.log("Person is qualified for discount");
+    }else{
+        console.log("Person doesn't qualify for discounts");
+    }
+}
+givingDiscount(14);
 // Exercise 6. Write a function that takes 2 parameters -- one number and one string.
 // The function should print the string the given number of times.
 // Then write some function calls you would use to test your function.
-
+function printingXTimes(numOfTimes, stringToRepeat){
+    
+}
 
 // Exercise 7. Read the following code (don't run it yet)
 function mysteryFunction1(p1) {
