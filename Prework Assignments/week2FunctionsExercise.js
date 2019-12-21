@@ -69,10 +69,11 @@ givingDiscount(59);
 // The function should print the string the given number of times.
 // Then write some function calls you would use to test your function.
 function printingXTimes(numOfTimes, stringToRepeat){
-if(numOfTimes>0){
-    for(i=0;i<numOfTimes;i++)
-    console.log(stringToRepeat+" repeat #"+i);
-}
+    if(numOfTimes>0){
+        for(i=0;i<numOfTimes;i++){
+        console.log(stringToRepeat+" repeat #"+i);
+        }
+    }
 }
 printingXTimes(2,"#6 bEepEE")
 // Exercise 7. Read the following code (don't run it yet)
@@ -130,7 +131,7 @@ function mysteryFunction1(p1) {
   // Using split() and groceryList, make an array of my grocery list items
   const groceryList = "#9 eggs,carrots,orange juice"
   function splitGroceryList(){
-      var groceryArray = groceryList.split(",")
+      var groceryArray = groceryList.split(",");
       console.log(groceryArray);
   }
   splitGroceryList();

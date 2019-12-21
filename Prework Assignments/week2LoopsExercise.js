@@ -11,15 +11,40 @@
 
 // Exercise 1. Write a 'while' loop that prints the integers (whole numbers)
 // between 1 and 5 (inclusive).
-
+function whileLoop(){
+    console.log("#1");
+    var i=1;
+    while(i<6){
+        console.log(i);
+    i++;
+    }
+}
+whileLoop();
 
 // Exercise 2. Write a 'do while' loop that prints the integers (whole numbers)
 // between 1 and 5 (inclusive).
-
+function doWhileLoop(){
+    console.log("#2");
+    var i = 1;
+    do{
+        console.log(i);
+        i++;
+    }while(i<5){
+        console.log(i);
+        i++;
+    }
+}
+doWhileLoop();
 
 // Exercise 3. Write a 'for' loop that prints the integers (whole numbers)
 // between 1 and 5 (inclusive).
-
+function forLoop(){
+    console.log("#3");
+    for(i=1;i<6;i++){
+        console.log(i);
+    }
+}
+forLoop();
 
 // Exercise 4. Now we want a loop that prints the integers 
 // counting DOWN from 10 to 1 (inclusive). Write three loops that do this, to practice
@@ -39,12 +64,16 @@
 // run without ever stopping). Then fix the loop so that it stops when
 // counterFour is equal to -100.
 
-let counterFour = 1;
-while (counterFour < 2) {
-    console.log('HELP ME!')
-    counterFour--;
+//This loop will go on forever because the counter is less than 2 and will always be 
+//less than 2 since you are subtracting everytime you do the loop
+function fixedInfiniteLoop(){
+    let counterFour = 1;
+    while (counterFour > -101) {
+        console.log('HELP ME!')
+        counterFour--;
+    }
 }
-
+//fixedInfiniteLoop();
 
 // Exercise 8. Make a variable that contains your favorite integer. Write a loop 
 // (your choice which type) that prints the integers from 0 to that number.
@@ -90,14 +119,14 @@ inside 1
 *********************************** 
 */
 
-for (let outsideCounter = 0; outsideCounter <= 3; ???) {
+/*for (let outsideCounter = 0; outsideCounter <= 3; ???) {
   console.log("counting down from", outsideCounter);
   for (let insideCounter = outsideCounter; ???; ???) {
       console.log("inside", ???);
   }
   console.log("***********************************")
 }
-
+*/
 
 // Congrats, you made it to the end!
 // Did you find this easy or hard? If you used references, which ones helped you? 
