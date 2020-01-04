@@ -94,7 +94,7 @@ for (i=0;i<myClassElements.length;i++){
 // Exercise 11: Make it so when the button2 is clicked, 
 // the children of the element with id "id1" each have their text replaced with a random number 1-100
 function changeRandoNum(){
-	var id1Kids = document.getElementById("id1").childNodes;
+	var id1Kids = document.getElementById("id1").children;
 	for (i=0;i<id1Kids.length;i++){
 		id1Kids[i].innerHTML= Math.floor(Math.random()*101);
 	}
