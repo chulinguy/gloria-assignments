@@ -45,31 +45,58 @@
   
   <script type="text/javascript">
   // Exercise 1: Select the element with id "id2" and change the text inside it to "Here's some new text"
+document.getElementById("id2").innerText = "Here's some new text";
+
   // Exercise 2: Select the element with id "id1" and make the text inside it green.
+document.getElementById("id1").style.color = "green";
+
   // Exercise 3: Select the elements that have the class "myClass". console.log the output.
+console.log(document.getElementsByClassName("myClass"));
+
   // Exercise 4: Select the children of the element with id "id1". console.log the output.
+console.log(document.getElementById("id1").children);
+
   // Exercise 5: Select all list items on the page. console.log the output.
+console.log(document.getElementsByTagName("li"));
+
   // Exercise 6: Use JavaScript to find the *number* of list items on the page. console.log the output.
+console.log(document.getElementsByTagName("li").length);
+
   // Exercise 7: Using JavaScript, create a list item and add it to the end of the ordered list.
+var newListItem = document.createElement("li");
+newListItem.innerText = "Snail";
+document.getElementById("ol1").appendChild(newListItem);
+
   // Exercise 8: Using JavaScript, make it so that when button1 is clicked, 
   // an alert pops up saying "Hi from Techtonica".
+function setAlert(){
+    alert("Hi from Techtonica");
+}
+document.getElementById("button1").onclick = function() {setAlert()};
+ 
   // Exercise 9: In your own words, write a few sentences explaining what the DOM is. Write your answer in a comment below:
-  
+//DOM represents the html page and creates a stucture of objects based on what's in your html page.
+//This lets you to create and modify the objects inside the page.
+
   //***BONUS***
   // The next two exercises combine the DOM with other JavaScript you've learned. Try them for an extra challenge!
   // Exercise 10: Select the elements with the class "myClass" and update the text inside each of them to end with "!"
   // Hint: To operate on multiple elements, you can use a loop.
+var myClassElements = document.getElementsByClassName("myClass");
+for (i=0;i<myClassElements.length;i++){
+	myClassElements[i].innerHTML = myClassElements[i].innerHTML.trim()+"!";
+}
+
   // Exercise 11: Make it so when the button2 is clicked, 
   // the children of the element with id "id1" each have their text replaced with a random number 1-100
-  // How was this exercise (easy, hard, fun, confusing)?
-  // What references did you use to help?
-  // Please put your answers in a comment below:
-  //
-  </script>
-  
-  </html>
-  
-  
+function changeRandomNum(){
+    var id1Kids = document.getElementById("id1").children;
+	for (i=0;i<id1Kids.length;i++){
+		id1Kids[i].innerHTML= Math.floor(Math.random()*101);
+	}
+}
+document.getElementById("button2").onclick = function() {changeRandomNum()};
+
   // Congrats, you made it to the end!
   // Did you find this easy or hard? If you used references, which ones helped you? 
   // Please answer in a comment below.
@@ -77,3 +104,6 @@
   
   // Email your file to bill.dephillips@gmail.com,  kisha@culturepurveyor.io and tcarpenter@techtonica.org
   // or commit your file to GitHub and email us a link.
+  </script>
+  
+  </html>
