@@ -1,0 +1,211 @@
+Command Line Cheat Sheet
+
+man : read a manual page
+apropos : find what man page is appropriate
+pwd : print working directory path
+cd : change directory. Need to specify where you want to change directory
+	$ cd Desktop
+echo : print some arguments
+	$ echo Hello
+ls : list directory
+	-l : puts things into a list
+		$ls -l
+	-a : shows all hidden files
+		$ ls -a or $ ls -la
+find : find files
+	(in current directory) 
+		$ find *.txt
+	(in another directory) 
+		$ find ~/Desktop -name *.txt
+touch : create new file
+	$ touch newTextFile.txt
+mkdir : make directory
+	$ mkdir newDirectory
+rm : remove file, need to specify file
+	$ rm newTextFile.txt
+	-R : to remove directory and everything inside as well
+rmdir : remove directory, need to specify directory
+	$ rmdir newDirectory
+pushd : acts like cd + shows you your path and recent paths
+	$ pwd 
+		~/folder1
+	$ pushd folder2/folder3
+		~/folder1/folder2/folder3 ~/folder1
+	$pushd folder4
+		~/folder1/folder2/folder3/folder4 ~/folder1/folder2/folder3 ~/folder1
+			(stack order
+						0: ~/folder1/folder2/folder3/folder4
+						1: ~/folder1/folder2/folder3
+						2: ~/folder1)
+	$pushd +0
+		~/folder1/folder2/folder3/folder4 ~/folder1/folder2/folder3 ~/folder1
+	$pushd +2
+		~/folder1 ~/folder1/folder2/folder3/folder4 ~/folder1/folder2/folder3
+			(pushed position 2 to the top of the list)
+	$pushd -0
+		~/folder1/folder2/folder3 ~/folder1 ~/folder1/folder2/folder3/folder4
+			(stack that was before ~/folder1 is now on top of stack)
+popd : removes paths from pushd stacks (refer to examples from above when looking at popd’s examples)
+	$popd +0
+		~/folder1 ~/folder1/folder2/folder3/folder4
+	$popd +1
+		~/folder1 	
+cp : copy a file or directory
+	$cp test.txt testdir
+mv : move or rename a file or directory
+	$mv oldname.txt newname.txt
+	$mv toBeMoved.txt newDirectoryName
+hostname : my computer’s network name
+less : page through
+more : page through (alternate)
+history : see previous commands from this shell
+head : print the first 10 lines of a file
+	$ head fileName.txt
+tail : print the last 10 lines of a file
+	$ tail fileName.txt
+grep : find things inside files
+	$grep “word(s)” fileToSearch
+	-i : search without case sensitivity
+	-c : counts how many lines include the searched string
+	-l : lists files that contain the word
+		$grep -l “word(s)” *
+cat : print the whole file into terminal
+env : look at your environment
+export : export/set a new environment variable
+	https://stackoverflow.com/questions/7328223/unix-export-command
+which : see path to a program
+	$ which node or $ which cd
+exit : exit the shell
+sudo : become the super user, root (DANGER - only use when necessary)
+chmod : change permission modifiers 
+	Number Meaning:
+		0 : no permission
+		1 : execute
+		2 : write
+		3 : write and execute
+		4 : read
+		5 : read and execute
+		6 : read and write
+		7 : read, write, and execute
+	Position Meaning
+		1 : Owner
+		2: Group
+		3: Others
+	$ chmod 755 TestFile.txt or $ chmod 744 fileDirectory
+	Or
+	“r” (read), “w” (write), “x” (execute), “–” (unset), “+” (set)
+	“d” (directory)
+	“u”(user), “g”(group), “o” (others), “a”(all)
+	$ chmod go-wx fileName.txt or $ chmod a+r
+chown :  change ownership
+	$ chown userName:groupName fileName.txt
+cut : remove sections from each line of files (need to specify bytes, character or fields)
+	$ cut -b -3 fileName
+		cuts first three bytes (including tabs) of each line and prints it out
+	$ cut -c 1-5 fileName
+		cuts first 5 characters (including tabs) of each line and prints it out
+	$ cut -d “ ” -f 1 fileName
+		cuts first section when line was delimited of each line and prints it out
+tr : translate, squeeze, and/or delete characters from standard input, writing to standard output
+	$ tr “[a-z]” “[A-Z]” fileName
+		turns all lowercase to uppercase in the file
+	-s : replaces  value with another value
+		$ tr -s “g” “f” fileName
+			turns all g’s in the file to f’s
+	-d : deletes all occurrences of the string
+		$ tr -d “g” fileName
+			deletes all g’s in the file
+	-c : complements the set
+		$ tr -cd [:digit:] fileName
+			deletes all characters that are not digits
+alias : allow a string to be substituted for a word when it is used as the first word of a simple command
+	$ alias goDesktop = “cd Desktop”
+		stored the value ‘cd Desktop’ to ‘goDesktop’. If you input goDesktop into the terminal, it will cd Desktop
+	$ unalias goDesktop
+		undo the storing 
+xargs : execute arguments
+	$ echo “one two” | xargs mkdir
+		creates two folders called ‘one’ and  ‘two’
+wc : wordcount (line, words, and byte/character count)
+	$ wc fileName
+		prints out # lines, # words, # chars, and fileName
+	-l : for line
+	-w : for word
+	-c :  for char or -b for bytes
+sort : sort data
+	$ sort fileName
+		sorts each line alphabetically
+	-n : sorts numerically
+	-r : reverse sort
+awk : scripting language to generate reports (automatically delimits lines by whitespaces)
+	-F “ “ : to specify a certain delimiter
+	when it splits the lines into fields, each fields are referred to $1, $2 …. $etc.
+		$ awk ‘{print $1, $3}’ textFile.txt
+			will print out fields in column 1 and 3
+	-f : to specify file that contains a awk script file
+	$ awk -f scriptFile fileToRunScriptOn
+	/Word/ : matching word
+		$ awk ‘/someWord/ {print $0}’ textFile.txt
+			prints all lines that contains ‘someWord’
+	BEGIN or END : creating headers or footers
+	some built in variables
+		NR : number of rows
+			$ awk ‘{print NR, $0}’ textFile.txt
+				prints all lines ($0 : the entire line) with the line number (NR)
+			$ awk 'NR==3, NR==6 {print NR,$0}' textFile.txt
+				prints all of line 3-6 with line number
+		NF : number of fields
+			$ awk ‘{print $1, $NF}’ textFile.txt
+				prints first column ($1 : the first field in each line) 
+				and the last column ($NF : $ number of fields = last field’s #)
+	https://likegeeks.com/awk-command/
+sed : stream editor for filtering and transforming text
+	$sed ’s/1stWord/2ndWord/‘ textFile.txt
+		replaces first occurrence of 1stWord with 2ndWord in textFile.txt
+		$sed ’s/1stWord/2ndWord/2‘ textFile.txt : second occurence
+		$sed ’s/1stWord/2ndWord/g‘ textFile.txt : all occurances (global)
+		$sed ’s/1stWord/2ndWord/2g‘ textFile.txt : all occurrences after (and including) the second occurrence
+	-n : suppresses printing duplicate line
+		$sed -n ’s/1stWord/2ndWord/p' textFile.txt
+			p prints double line because it prints the lines that have been affected and not affected by replace
+			n prevents double line by not printing out the end product lines (including lines not affected)
+			this command only prints out lines that had replacements
+	$ sed ‘5d’ textFile.txt
+		deleted line 5 in text file
+		‘x,yd’ to deleted lines from #x to #y
+		‘$d” last line
+		‘/word/d’ deletes line containing ‘word’
+uniq : filters out repeated lines in a file (duplicate lines must need to be next to each other, use sort before this)
+	$ uniq textFile.txt
+		removes all duplicate lines
+	-c : counts how many times
+	-d : prints out repeated lines
+	-u : prints unique lines
+tar : create and extract Archive files
+	$ tar [options] [archive-file] [file or directory to be archived]
+	https://www.geeksforgeeks.org/tar-command-linux-examples/
+gzip : compresses files
+	$ gzip [Options] [filenames]
+	https://www.geeksforgeeks.org/gzip-command-linux/
+whereis : similar to which except it also finds the manual’s directory as well 
+service : starts or stops a service by running the init script
+	https://support.rackspace.com/how-to/checking-running-services-on-linux/
+passwd : change the user account passwords
+	$ passwd
+df : displays disk space available
+	$ df textFile.txt
+du : displays disk space usage
+	$ du -h fileName
+wget : download files from the internet
+	$ wget URL.php
+	https://www.geeksforgeeks.org/wget-command-in-linux-unix/
+who :  displays user who logged in, terminal lines, login time, remote host
+	$ who
+ping : check connectivity between host and server
+	$ ping [URL]
+	https://www.geeksforgeeks.org/ping-command-in-linux-with-examples/
+shutdown : shutdown system
+ 	$sudo shutdown
+	https://www.geeksforgeeks.org/shutdown-command-in-linux-with-examples/
+
+
