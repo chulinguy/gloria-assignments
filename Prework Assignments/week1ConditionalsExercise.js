@@ -225,7 +225,7 @@ function exercise8(amount1, amount2, minimum, maximum) {
   // --------------------------------------------
   // Write your code for the exercise below here:
   // --------------------------------------------
-  if (minimum<amount1<maximum && minimum<amount2<maximum){
+  if (minimum<amount1 && amount1<maximum && minimum<amount2 && amount2<maximum){
     answer8 = true;
   }else{
     answer8 = false;
@@ -235,6 +235,7 @@ function exercise8(amount1, amount2, minimum, maximum) {
   // --------------------------------------------
   return answer8;
 }
+console.log(exercise8(3,2,1,5));
 
 // EXERCISE 9.
 // In this exercise, if `item` is a number, follow the rules given in Exercise 7
