@@ -1,0 +1,62 @@
+body{
+    display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 2%;
+    grid-column-gap: 5%;
+    background: url("https://2.bp.blogspot.com/-qqoQiqN8t-4/XPxzBiyQcUI/AAAAAAAADtc/_zjVDiidpzQPkKWetkf5jkdJ4_E12RCaACKgBGAs/w2560-h1440-c/scorbunny-grookey-pokemon-sword-and-shield-uhdpaper.com-4K-17.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+h1{
+    grid-column: 1 / 6; 
+    grid-row: 1 / 2;
+    text-align: center;
+    font-size: 80px;
+    margin-top: 5%;
+    margin-bottom: 0;
+}
+.lists{
+    grid-column: 2 / 4; 
+    text-align: center;
+    list-style: inside;
+    border-style: solid;
+    background:rgba(113, 205, 244, 0.548);
+}
+#ingredientList{
+    grid-row: 2 / 3;
+}
+#instructionsList{
+    grid-row: 3 / 5;
+    padding-bottom: 5%;
+}
+.insideLists{
+    text-align: left;
+    margin-left: 20%;
+    padding-left: 0;
+    padding-right: 10%;
+}
+#otherInfo{
+    text-align: left; 
+    margin-left: 10%;
+    margin-right: 10%;
+}
+a{
+    color: white;
+}
+p{
+    font-size: 20px;
+    margin: 0;
+    padding: 2%;
+    background:rgba(113, 205, 244, 0.883);
+}
+#pokemonImage{
+    grid-column: 4 / 5; 
+    grid-row: 2 / 4; 
+    text-align: center;
+    border-style: solid;
+    background:rgba(113, 205, 244, 0.548);
+}
