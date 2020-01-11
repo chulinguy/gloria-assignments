@@ -24,7 +24,7 @@ h1{
     text-align: center;
     list-style: inside;
     border-style: solid;
-    background:rgba(113, 205, 244, 0.548);
+    background:rgba(255, 255, 255, 0.548);
 }
 #ingredientList{
     grid-row: 2 / 3;
@@ -45,7 +45,7 @@ h1{
     margin-right: 10%;
 }
 a{
-    color: white;
+    color: darkcyan;
 }
 p{
     font-size: 20px;
@@ -58,5 +58,5 @@ p{
     grid-row: 2 / 4; 
     text-align: center;
     border-style: solid;
-    background:rgba(113, 205, 244, 0.548);
+    background:rgba(255, 255, 255, 0.548);
 }
