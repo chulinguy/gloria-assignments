@@ -1,0 +1,52 @@
+1.How do you plan on exhibiting professionalism at Techtonica? What would be different in a full-time engineering job setting?
+To exhibit professionalism at Techtonica by being one time, doing all of my assignments in a timely order, and communicate to others in a profesional way. There should be no difference between being professional at
+Techtonica vs a full-time engineering job.
+
+2.What would you do if you just found out you are going to be an hour late tomorrow morning?
+I would notify Bill, Kisha, and my peers  about my tardiness. 
+
+3.What would you do if you realized that you only had time to finish most of your work by the due date of a group project?
+I would notify Bill and Kisha about needing more time to complete my tasks.
+
+4.Knowing yourself, what are the most effective ways for you to learn and retain new information?
+The most effective ways for me to learn and retain new materials are making diagrams to visualize the new information and to practice what I learned.
+
+5.What is growth mindset?
+Growth mindset is believeing that hardwork, persistance, and  determination can develop skills even if you didn't have any background in it.
+
+6.Which operating system are you using right now? Name two other popular operating systems.
+I am using MacOs. Two other popular OS are Windows, Ubuntu.
+
+7.Why do computers need operating systems?
+Computers need operating systems to communicate between hardware and software.
+
+8.Explain what you would do if you felt stuck on a coding problem.
+If I felt stuck on a coding program, I would first google and try to research the solution. If that doesn't work, then I ask help from peers and mentors.
+
+9.Describe the ways you plan on meeting and staying connected with new people in tech this month.
+Ways to meet new people are going to conventions or meet ups. A good way to keep in touch with people is to add them on LinkedIn.
+
+10.Describe some examples of effective body language and what is communicated when they are used well.
+Effective body language is standing up straight, giving eye contact, and not fiddling with anything. When these are used well, people feel like you are interested in what they 
+are communicating.
+
+11.Describe some examples of effective word choice and what is communicated when they are used well.
+Some effective word choice example are to not use filler words and to not be repetive. People are more incline to listen to you and understand what you are trying to convey more.
+
+12.How can you build trust in a team?
+You can build trust in a team by helping others, be honest and direct with them.
+
+13.How are the devices on the internet physically connected to each other?
+Devices on the internet are physically connected to each other by servers that are connected to each other by underground or underwater optical fiber cables. 
+
+14.How is information physically transmitted from device to device?
+Information is physically transmitted from one device to another by wires, cables and wifi. 
+
+15.How does one device find another it’s trying to communicate with?
+They find the ip address of the domain name by using DNS (communicating with a bunch of servers,RNS-->root name server-->TLD name server-->ANS).
+
+16.What methods do devices on the internet use to communicate?
+Informations are transmitted from one device to another by TCP (breaking down files into packets, sending them, and recieving them).
+
+17.How can we send data reliably even if the network is unreliable?
+HTTPS, SSL, and TLS encrypts data to keep the data secure.
