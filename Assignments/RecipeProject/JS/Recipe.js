@@ -28,6 +28,23 @@ function displayingMenu(){
     }
 }
 
-menuButton.onclick = function(){displayingMenu()};
+function clickingOutMenu(){
+    if(displayMenuOnOff == true){
+        menuList.style.display = "none";
+        displayMenuOnOff = false;
+    }
+}
+
+function clickingMenuEventListener(){
+    if(event.target.id === "dropDownBtn"){
+        displayingMenu();
+    }else if(event.target.id === "dropDownList"){
+        //do nothing
+    }else{
+        clickingOutMenu();
+    }
+}
+
+document.addEventListener("click", clickingMenuEventListener);
 getCurryImageNameArray();
 setInterval(function(){changingCurry();}, 2000);
