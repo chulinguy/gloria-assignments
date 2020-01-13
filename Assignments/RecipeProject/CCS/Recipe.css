@@ -4,7 +4,7 @@ body{
 	grid-template-rows: repeat(4, 1fr);
     grid-row-gap: 2%;
     grid-column-gap: 5%;
-    background: url("https://2.bp.blogspot.com/-qqoQiqN8t-4/XPxzBiyQcUI/AAAAAAAADtc/_zjVDiidpzQPkKWetkf5jkdJ4_E12RCaACKgBGAs/w2560-h1440-c/scorbunny-grookey-pokemon-sword-and-shield-uhdpaper.com-4K-17.jpg");
+    background: rgba(0, 0, 0, 0.582) url("../Images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -16,10 +16,57 @@ h1{
     grid-row: 1 / 2;
     text-align: center;
     font-size: 80px;
-    margin-top: 5%;
-    margin-bottom: 0;
+    margin-top: 1.5%;
+    margin-bottom: 3%;
+}
+.dropDown{
+    text-align: center;
+    grid-column: 1/2; 
+    grid-row: 1/5;
+    margin: 10%; 
+}
+#dropDownBtn{
+    border-radius: 50%;
+    width: 50%;
+    align-content: center;
+    background-color: rgba(255, 255, 255, 0.548);
+    padding: 10%;
+}
+#dropDownBtn:focus{
+    outline: none;
+}
+#dropDownBtn:hover{
+    background-color: rgba(139, 139, 139, 0.712);
+}
+#dropDownList{
+    display: none;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.548);
+    z-index: 1;
+}
+#dropDownList a{
+    display: block;
+    color: black;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+#dropDownList a:hover{
+    background-color: rgba(139, 139, 139, 0.712);
+}
+#dropDownList a:nth-child(1){
+    border-radius: 40px 40px 0% 0%;
+}
+#dropDownList a:nth-last-child(1){
+    border-radius: 0% 0% 40px 40px;
+}
+p{
+    font-size: 20px;
+    margin: 0;
+    padding: 2%;
+    background:rgba(113, 205, 244, 0.883);
 }
 .lists{
+    
     grid-column: 2 / 4; 
     text-align: center;
     list-style: inside;
@@ -46,12 +93,6 @@ h1{
 }
 a{
     color: darkcyan;
-}
-p{
-    font-size: 20px;
-    margin: 0;
-    padding: 2%;
-    background:rgba(113, 205, 244, 0.883);
 }
 #pokemonImage{
     grid-column: 4 / 5; 
