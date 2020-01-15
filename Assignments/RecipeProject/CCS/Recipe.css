@@ -13,7 +13,7 @@ body{
 }
 h1{
     font-family: 'Expletus Sans', cursive;
-    text-shadow: 2px 2px rgba(73, 75, 77, 0.356);
+    text-shadow: 2px 2px rgba(64, 98, 112, 0.356);
     grid-column: 2 / 6; 
     grid-row: 1 / 2;
     text-align: left;
