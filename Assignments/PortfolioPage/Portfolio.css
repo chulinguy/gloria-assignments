@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Happy+Monkey&display=swap');
+body{
+  background: white !important;
+  font-family: 'Happy Monkey', sans-serif !important;
+}
+.gheader {
+    height: 30vh;
+    background: radial-gradient(ellipse at bottom, #090a0f 0%, #1e2c3bf3 100%);
+    filter: drop-shadow(0 12px px white);
+    margin-bottom: 0 !important;
+  }
+.navbar{
+  background: radial-gradient(ellipse at top, #090a0f 0%, #1e2c3bf3 100%);
+}
+.typewriter{
+  margin-left: 10vw;
+  margin-right: 10vw;
+  position: relative;
+  top: 25%;
+}
+.typewriter h1 {
+  
+  font-size: 4vw;
+  color: #fff;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(50, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+.contentInside{
+  text-align: center;
+  margin-top: 10vh;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-bottom: 20vh;
+}
