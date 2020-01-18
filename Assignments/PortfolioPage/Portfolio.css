@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Happy+Monkey&display=swap');
+
 body{
   background: white !important;
   font-family: 'Happy Monkey', sans-serif !important;
@@ -6,7 +7,6 @@ body{
 .gheader {
     height: 30vh;
     background: radial-gradient(ellipse at bottom, #090a0f 0%, #1e2c3bf3 100%);
-    filter: drop-shadow(0 12px px white);
     margin-bottom: 0 !important;
   }
 .navbar{
@@ -19,7 +19,6 @@ body{
   top: 25%;
 }
 .typewriter h1 {
-  
   font-size: 4vw;
   color: #fff;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -41,13 +40,47 @@ body{
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: orange }
+  50% { border-color: #1083fff3 }
+}
+.snow{
+  position: absolute;
+  height: 120em;
+  width: 100vw;
+  z-index:-1;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+.snowDot{
+  position: absolute;
+  display: block;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.contentHeader{
+  padding-bottom: 4vh;
+  color: #fff;
 }
 
 .contentInside{
   text-align: center;
-  margin-top: 10vh;
-  margin-left: 20vw;
-  margin-right: 20vw;
-  margin-bottom: 20vh;
+  padding-top: 10vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+.pBackground{
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.568);
+}
+
+.aboutMeP{
+  min-width: 300px !important;
+  margin:0;
+}
+
+.picOfMe{
+  border-radius: 10%;
+  height: 450px;
+  width: 300px;
 }

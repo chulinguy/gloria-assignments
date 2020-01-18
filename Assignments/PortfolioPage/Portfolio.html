@@ -10,44 +10,78 @@
     <title>Home Page</title>
   </head>
     <body>
-        <nav class="navbar navbar-expand navbar-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">Gloria Tam</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbar1">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#AboutMe">About Me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Experiences">Experiences</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Projects">Projects</a>
-                        </li>
-                    </ul>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Gloria Tam</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar1">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#AboutMe">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Experiences">Experiences</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Projects">Projects</a>
+                </li>
+              </ul>
             </div>
         </nav>
-        <div class="gheader jumbotron jumbotron-fluid">
+          <div class="gheader jumbotron jumbotron-fluid">
             <div class="typewriter">
                 <h1>Hello! Welcome to my portfolio!</h1>
               </div>
         </div>
-        <div class="contents">
-            <div class="aboutMe contentInside" id="AboutMe">
-                <h1>About Me</h1>
-                <p>WBABBABABABABABABA FETCH POKEMON POKEMPOMEPOEKEMEPIEJPOKE POKE POKE POKE POKE POKE POKE</p>
+        <div class="contentContainer">
+            <div class="snow" id="layer 1">
             </div>
-            <div class="experiences contentInside" id="Experiences">
-                <h1>Experiences</h1>
-                <p>WBABBABABABABABABA FETCH POKEMON POKEMPOMEPOEKEMEPIEJPOKE POKE POKE POKE POKE POKE POKE</p>
-            </div>
-            <div class="projects contentInside" id="Projects">
-                <h1>Projects</h1>
-                <p>WBABBABABABABABABA FETCH POKEMON POKEMPOMEPOEKEMEPIEJPOKE POKE POKE POKE POKE POKE POKE</p>
+            <div class="contents">
+                <div class="aboutMe contentInside" id="AboutMe">
+                    <h1 class="contentHeader">About Me</h1>
+                        <div class="container spacingContent">
+                            <div class="row">
+                                <div class="col pBackground">
+                                    <p class="aboutMeP"> 
+                                        Hello! My name is Gloria. 
+                                        A little background of me is that I used to be a manual QA tester.
+                                        I took what developers created and get to try to break it, which was really fun.
+                                        I got to work closely with them and thought what they were doing cool.
+                                        It's exiciting to create something out of nothing. It's kind of like magic! 
+                                        I dabbled a little bit into coding in school, such as intro courses, but I never
+                                        really had the opertunity to just focus on it. I was working a full time job and after work,
+                                        I would be in school trying to earn a degree (unrelated to tech). I was sort of in a runt, until 
+                                        my sister told me about Techtonica, a free coding bootcamp for women and binary adults. I'm grateful
+                                        for this oppertunity because I can put all my focus on learning to become a full stack software developer
+                                        without having to worry about finding resources and other living factors, such as a laptop to work on, meals 
+                                        being provided, and etc. I hope in the future, I can give back and contribute to the community while doing
+                                        what I enjoy.
+                                    </p>
+                                </div>    
+                                <div class="col d-block m-auto">
+                                    <img class="picOfMe " src="Me.jpg" alt="Photo of me">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="experiences contentInside" id="Experiences">
+                    <h1 class="contentHeader">Experiences</h1>
+                    <div class="container spacingContent">
+                        <p class="pBackground">WBABBABABABABABABA FETCH POKEMON POKEMPOMEPOEKEMEPIEJPOKE POKE POKE POKE POKE POKE POKE</p>
+                    </div>
+                </div>
+                <div class="projects contentInside" id="Projects">
+                    <h1 class="contentHeader">Projects</h1>
+                    <div class="container spacingContent">
+                        <p class="pBackground">WBABBABABABABABABA FETCH POKEMON POKEMPOMEPOEKEMEPIEJPOKE POKE POKE POKE POKE POKE POKE
+                            <br>
+                            WBABBABABABABABABA FETCH POKEMON POKEMPOMEPOEKEMEPIEJPOKE POKE POKE POKE POKE POKE POKE
+                             <br>
+                            WBABBABABABABABABA FETCH POKEMON POKEMPOMEPOEKEMEPIEJPOKE POKE POKE POKE POKE POKE POKE     
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     <!-- Optional JavaScript -->
@@ -55,5 +89,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="Portfolio.js"></script>
   </body>
 </html>
