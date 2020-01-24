@@ -6,3 +6,15 @@
 // calculateSum(1)	1
 // calculateSum(3)	6
 // calculateSum(10) 55
+
+function calculateSum(numToAddUpTo){
+    let sumOfNums=0;
+    for(i=0;i<=numToAddUpTo;i++){
+        sumOfNums = sumOfNums+i;
+    }
+    return sumOfNums;
+}
+
+console.log(calculateSum(0));
+console.log(calculateSum(3));
+console.log(calculateSum(10));

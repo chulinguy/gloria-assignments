@@ -6,3 +6,12 @@
 // loopThrough(0)	Nothing displayed
 // loopThrough(1)	Message displayed 1 time
 // loopThrough(3)	Message displayed 3 times
+
+function loopThrough(numToLoop){
+    for (i=0; i<numToLoop; i++){
+        console.log("hello!");
+    }
+}
+
+loopThrough(0);
+loopThrough(3);

@@ -10,4 +10,9 @@
 // metersToInches(1.5)	59.05515
 // metersToInches(15.6)	614.17356
 
+function metersToInches(meters){
+    return meters*39.3701;
+}
 
+console.log(metersToInches(1));
+console.log(metersToInches(1.5));
