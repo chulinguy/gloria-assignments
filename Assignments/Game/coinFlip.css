@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css?family=Happy+Monkey&display=swap');
+.body{
+    font-family: 'Happy Monkey', cursive;
+}
+
+.gameModal {
+    font-family: 'Happy Monkey', cursive;
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.678);
+}
+
+.modalContent{
+    position: fixed;
+    padding: 10%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10%;
+    width: 30%;
+    height: 20%;
+    background-color: rgba(39, 143, 161, 0.317);
+}
+
+h1{
+    text-align: center;
+}
+
+#coinsToFlip[type="text"]{
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 90%;
+    outline: none;
+}
+
+#inputBtn{
+    font-size: 90%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    margin-top: 10px;
+    font-family: 'Happy Monkey', cursive;
+}
+
+button{
+    border: none;
+    outline: none;
+    color: snow;
+    background-color: rgb(32, 141, 184);
+    
+}
+
+button:hover{
+    background-color: rgb(228, 179, 213);
+}
+
+#errorMsg{
+    padding-top: 2%;
+    color: red;
+}
+
+.gameBody{
+    font-family: 'Happy Monkey', cursive;
+    background: url("KirbyBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.character{
+    grid-row: 3/4;
+    grid-column: 2/3;
+    margin: auto;
+}
+#kirby{
+    margin-top: 70px;
+    border-radius: 50%;
+    background: pink;
+    box-shadow: 0px 0px 2px red;
+    width: 100px;
+    height: 100px;
+}
+
+#kirby-eye-left{
+    position: absolute;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 27px;
+    width: 15px;
+    height: 35px;
+    background: black;
+
+}
+#kirby-eye-left::before{
+    content:"";
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    margin-top: 2px;
+    margin-left: -4px;
+    width: 9px;
+    height: 15px;
+    background: white;
+
+}
+
+#kirby-eye-left::after{
+    content:"";
+    position: absolute;
+    border-radius: 50%;
+    margin-top: 6px;
+    margin-left: -5px;
+    width: 11px;
+    height: 26px;
+    background: radial-gradient(ellipse at top, #080808 0%, #237bd8 100%);
+}
+
+#kirby-eye-right{
+    position: absolute;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 58px;
+    width: 15px;
+    height: 35px;
+    background: black;
+}
+
+#kirby-eye-right::before{
+    content:"";
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    margin-top: 2px;
+    margin-left: -4px;
+    width: 9px;
+    height: 15px;
+    background: white;
+
+}
+#kirby-eye-right::after{
+    content:"";
+    position: absolute;
+    border-radius: 50%;
+    margin-top: 6px;
+    margin-left: -5px;
+    width: 11px;
+    height: 26px;
+    background: radial-gradient(ellipse at top, #080808 0%, #237bd8 100%);
+}
+
+#close-eye-left{
+    display: none;
+    position: absolute;
+    border-radius: 25%;
+    margin-top: 45px;
+    margin-left: 27px;
+    width: 15px;
+    height: 5px;
+    background: black;
+    transform: rotate(15deg);
+}
+#close-eye-right{
+    display: none;
+    position: absolute;
+    border-radius: 25%;
+    margin-top: 45px;
+    margin-left: 58px;
+    width: 15px;
+    height: 5px;
+    background: black;
+    transform: rotate(-15deg);
+}
+
+#blush-left{
+    position: absolute;
+    border-radius: 50%;
+    margin-top: 55px;
+    margin-left: 10px;
+    width: 15px;
+    height: 10px;
+    background: rgb(219, 87, 98);
+}
+#blush-right{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    margin-top: 55px;
+    margin-left: 75px;
+    width: 15px;
+    height: 10px;
+    background: rgb(219, 87, 98);
+}
+
+#mouth{
+    position: absolute;
+    border-radius: 19px 19px 35px 35px ;
+    margin-top: 59px;
+    margin-left: 41px;
+    border-bottom: 15px solid rgb(200, 2, 2);
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    height: 0;
+    width: 15px;
+}
+
+#mouth::after{
+    content:'';
+    position: absolute;
+    margin-top: 5px;
+    margin-left: -6px;
+    border-radius: 30px 30px 50px 50px;
+    border-bottom: 10px solid rgb(251, 45, 45);
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    height: 0;
+    width: 11px;
+}
+
+#arm-left{
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    transform: rotate(-25deg);
+    margin-top: -60px;
+    margin-left: -20px;
+    width: 40px;
+    height: 30px;
+    background: pink;
+}
+
+#arm-right{
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    transform: rotate(25deg);
+    margin-top: -60px;
+    margin-left: 80px;
+    width: 40px;
+    height: 30px;
+    background: pink;
+}
+
+#leg-left{
+    position: absolute;
+    z-index: -2;
+    border-radius: 50% 50% 40% 50%;
+    transform: rotate(-10deg);
+    margin-top: -20px;
+    margin-left: 3px;
+    width: 45px;
+    height: 30px;
+    background: rgb(200, 2, 2);
+}
+
+#leg-right{
+    position: absolute;
+    z-index: -2;
+    border-radius: 50% 50% 50% 40%;
+    transform: rotate(10deg);
+    margin-top: -20px;
+    margin-left: 55px;
+    width: 45px;
+    height: 30px;
+    background: rgb(200, 2, 2);
+}
+.coin{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin: auto;
+}
+
+#coinBox{
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    background: rgb(131, 82, 42);
+    box-shadow: 0px 0px 4px rgb(65, 40, 20);
+}
+
+#coinHT{
+    position: absolute;
+    opacity: 0;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 900;
+    border-radius: 50%;
+    margin-top: -90px;
+    margin-left: 10px;
+    width: 80px;
+    height: 80px;
+    color: rgb(204, 133, 0);
+    background: rgb(246, 172, 52);
+    box-shadow: 0px 0px 4px rgb(236, 165, 50);
+}
+
+.reminders{
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+.reminderCoins{
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width: 30px;
+    height: 30px;
+    color: rgb(204, 133, 0);
+    background: rgb(246, 172, 52);
+    box-shadow: 0px 0px 4px rgb(236, 165, 50);
+}
+
+.endGameModal{
+    font-family: 'Happy Monkey', cursive;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.678);
+}
+
+.endModalContent{
+    position: fixed;
+    padding: 10%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10%;
+    width: 30%;
+    height: 20%;
+    background-color: rgba(39, 143, 161, 0.317);
+}
+
+#YesBtn{
+    font-family: 'Happy Monkey', cursive;
+    font-size: 40px;
+    width: 100px;
+    height: 50px;
+}
+
+#gameHeader{
+    grid-row: 1/2;
+    grid-column: 1/4;
+}

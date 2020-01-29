@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="coinFlip.css"></link>
+    <title>Coin Flip</title>
+</head>
+<body>
+    <div class="gameModal">
+        <div class ="modalContent">
+            <h1>How many coins to flip?</h1>
+            <input type="text" id="coinsToFlip">
+            <button id="inputBtn">Submit</button>
+            <div id="errorMsg"></div>
+        </div>
+    </div>
+    <div class="endGameModal">
+        <div class ="endModalContent">
+            <h1>Play Again?</h1>
+            <button id="YesBtn">Yes</button>
+        </div>
+    </div>
+    <div class="gameBody">
+        <h1 id="gameHeader">Press Any Button</h1>
+        <div class="coin">
+            <div id="coinBox"></div>
+            <div id="coinHT"></div>
+        </div>
+        <div class="reminders"></div>
+        <div class="character">
+            <div id="kirby">
+                <div id="kirby-eye-left"></div>
+                <div id="kirby-eye-right"></div>
+                <div id="close-eye-left"></div>
+                <div id="close-eye-right"></div>
+                <div id="blush-left"></div>
+                <div id="blush-right"></div>
+                <div id="mouth"></div>
+            </div>
+            <div id="arm-right"></div>
+            <div id="arm-left"></div>
+            <div id="leg-right"></div>
+            <div id="leg-left"></div>
+        </div>
+    </div>
+</body>
+<script src="coinFlip.js"></script>
+</html>
