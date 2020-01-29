@@ -8,15 +8,16 @@
 </head>
 <body>
     <div class="gameModal">
-        <div class ="modalContent">
-            <h1>How many coins to flip?</h1>
+        <div class="modalContent">
+            <h1 id="gamePrompt">How many coins to flip?</h1>
             <input type="text" id="coinsToFlip">
+            <br>
             <button id="inputBtn">Submit</button>
             <div id="errorMsg"></div>
         </div>
     </div>
     <div class="endGameModal">
-        <div class ="endModalContent">
+        <div class ="modalContent">
             <h1>Play Again?</h1>
             <button id="YesBtn">Yes</button>
         </div>
@@ -24,8 +25,18 @@
     <div class="gameBody">
         <h1 id="gameHeader">Press Any Button</h1>
         <div class="coin">
-            <div id="coinBox"></div>
-            <div id="coinHT"></div>
+            <div id="coinBox">
+                <div id="plack">
+                    <div id="Q">?</div>
+                </div>
+                <div class="screw" id="screw1"></div>
+                <div class="screw" id="screw2"></div>
+                <div class="screw" id="screw3"></div>
+                <div class="screw" id="screw4"></div>
+            </div>
+            <div id="coinHT">
+                <div id="innerCoin"></div>
+            </div>
         </div>
         <div class="reminders"></div>
         <div class="character">

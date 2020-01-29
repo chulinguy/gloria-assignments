@@ -8,13 +8,13 @@ let kirbyLEye = document.getElementById("kirby-eye-left");
 let closedREye = document.getElementById("close-eye-right");
 let closedLEye = document.getElementById("close-eye-left");
 let coinBox = document.getElementById("coinBox");
-let coinHT = document.getElementById("coinHT");
-let coinArray = [];
+let innerCoinHT = document.getElementById("innerCoin");
 
 function flipCoin(){
     //turning off game select modal
     //entering mode's array into the generator
     if(event.target.id === "inputBtn"){
+        let coinArray = [];
         let coinFlipVal = document.getElementById("coinsToFlip").value;
         if(checkingflipNum(coinFlipVal)){
             document.addEventListener("keyup",function(){hitCoinBox(coinArray, coinFlipVal)});
@@ -29,12 +29,12 @@ function checkingflipNum(coinFlipInput){
     let errorMsging = document.getElementById("errorMsg");
     if(!isNaN(Number(coinFlipInput))){
         //if coinflipInput is not a NaN
-        if(coinFlipInput>0&& coinFlipInput<51){
+        if(coinFlipInput>0&& coinFlipInput<=40){
             let modal = document.getElementsByClassName("gameModal");
             modal[0].style.display = "none";
             return true;
-        }else if(coinFlipInput>=51){
-            errorMsging.innerHTML = "Too many coins! Max is 50 please.";
+        }else if(coinFlipInput>40){
+            errorMsging.innerHTML = "Too many coins! Max is 40 please.";
             return false;
         }else{
             errorMsging.innerHTML = "Please enter a positive number!";
@@ -51,8 +51,8 @@ function moveKirbyBody(duration){
     kirbyBody.animate(
         [
             {transform:'translateY(0vh)', offset: 0},
-            {transform:'translateY(-2vh)', offset: .4},
-            {transform:'translateY(-2vh)', offset: .5},
+            {transform:'translateY(-1.5vh)', offset: .4},
+            {transform:'translateY(-1.5vh)', offset: .5},
             {transform:'translateY(0vh)', offset: .95},
             {transform:'translateY(0vh)', offset: 1}
         ],
@@ -299,18 +299,35 @@ function moveCoinBox(duration){
 }
 
 function moveCoin(duration){
+    //coin animation when coin block is hit
     coinHT.animate([
         {opacity: 0, transform:'translateY(0vh) rotateY(0deg)', offset: 0},
         {opacity: 0, transform:'translateY(0vh) rotateY(0deg)', offset: .075},
-        {opacity: 0, transform:'translateY(-12vh) rotateY(360deg)', offset: .099},
+        {opacity: 1, transform:'translateY(-12vh) rotateY(360deg)', offset: .099},
         {opacity: 1, transform:'translateY(-20vh) rotateY(360deg)', offset: .1},
         {opacity: 1, transform:'translateY(-35vh) rotateY(0deg)', offset: .15},
         {opacity: 1, transform:'translateY(-35vh) rotateY(360deg)', offset: .175},
-        {opacity: 1, transform:'translateY(-12vh) rotateY(0deg)', offset: .25},
-        {opacity: 1, transform:'translateY(-12vh) rotateY(360deg)', offset: 1}
+        {opacity: 1, transform:'translateY(0vh) rotateY(0deg)', offset: .25},
+        {opacity: 1, transform:'translateY(0vh) rotateY(360deg)', offset: 1}
     ],
     {
         duration: duration,
+        easing: 'linear'
+    });
+}
+
+
+function reminderCoinsSpin(coin){
+    coin.animate([
+        {transform:'rotateY(0deg)', offset: 0},
+        {transform:'rotateY(360deg)', offset: .075},
+        {transform:'rotateY(0deg)', offset: .3},
+        {transform:'rotateY(180deg)', offset: .6},
+        {transform:'rotateY(0deg)', offset: 1}
+    ],
+    {
+        duration: 1500,
+        iterations: 1,
         easing: 'linear'
     });
 }
@@ -326,13 +343,14 @@ function headsOrTails(){
 }
 
 function hitCoinBox(array, arrayMaxLength){
+    //hit coin box animation, storing try values and displaying them, and checking for end game
     if(array.length<arrayMaxLength){
         let coinToSpin = headsOrTails();
         if(coinToSpin==="heads"){
-            coinHT.innerHTML = "H";
+            innerCoinHT.innerHTML = "H";
             array.push("H");
         }else{
-            coinHT.innerHTML = "T";
+            innerCoinHT.innerHTML = "T";
             array.push("T");
         }
         kirbyJumping(800);
@@ -345,19 +363,26 @@ function hitCoinBox(array, arrayMaxLength){
 }
 
 function createCoinTryReminder(array){
+    //generating the coin tries
     let reminderSpace = document.getElementsByClassName("reminders");
     let reminderCoins = document.createElement("div");
+    let reminderInnerCoins = document.createElement("div");
     reminderSpace[0].appendChild(reminderCoins);
     reminderCoins.setAttribute("class","reminderCoins");
-    reminderCoins.innerHTML = array[array.length-1];
+    reminderCoins.appendChild(reminderInnerCoins);
+    reminderInnerCoins.setAttribute("id","reminderInnerCoins");
+    reminderInnerCoins.innerHTML = array[array.length-1];
+    reminderCoinsSpin(reminderCoins);
 }
 
 function endGameModal(){
+    //turning the end game prompt
     let modal = document.getElementsByClassName("endGameModal");
     modal[0].style.display = "block";
 }
 
 function playAgain(){
+    //reloading the page if the game ended and player choses to play again
     let endModal = document.getElementsByClassName("endGameModal");
     if (endModal[0].style.display === "block" && event.target.id === "YesBtn"){
         location.reload();
