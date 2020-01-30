@@ -7,11 +7,11 @@ function makeCloudsFloat(){
         if(i%2===0){
             cloudArray[i].animate(
                 [
-                    {transform:'translate(0vw, 0vh)', offset: 0},
-                    {transform:'translate(4vw, 4vh)', offset: 0.25},
-                    {transform:'translate(6vw, 0vh)', offset: 0.5},
-                    {transform:'translate(4vw, 4vh)', offset: 0.75},
-                    {transform:'translate(0vw, 0vh)', offset: 1}
+                    {transform:'translate(0px, 0px)', offset: 0},
+                    {transform:'translate(40px, 15px)', offset: 0.25},
+                    {transform:'translate(60px, 0px)', offset: 0.5},
+                    {transform:'translate(40px, 15px)', offset: 0.75},
+                    {transform:'translate(0px, 0px)', offset: 1}
                 ],
                 {
                     duration: 6000,
@@ -22,11 +22,11 @@ function makeCloudsFloat(){
         }else{
             cloudArray[i].animate(
                 [
-                    {transform:'translate(0vw, 0vh)', offset: 0},
-                    {transform:'translate(2vw, -4vh)', offset: 0.25},
-                    {transform:'translate(4vw, 0vh)', offset: 0.5},
-                    {transform:'translate(2vw, -4vh)', offset: 0.75},
-                    {transform:'translate(0vw, 0vh)', offset: 1}
+                    {transform:'translate(0px, 0px)', offset: 0},
+                    {transform:'translate(40px, -15px)', offset: 0.25},
+                    {transform:'translate(60px, 0px)', offset: 0.5},
+                    {transform:'translate(40px, -15px)', offset: 0.75},
+                    {transform:'translate(0px, 0px)', offset: 1}
                 ],
                 {
                     duration: 6000,
