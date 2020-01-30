@@ -3,6 +3,7 @@ let kirbyRArm=document.getElementById("arm-right");
 let kirbyLArm=document.getElementById("arm-left");
 let kirbyRLeg=document.getElementById("leg-right");
 let kirbyLLeg=document.getElementById("leg-left");
+let kirbyShadow=document.getElementById("shadow");
 let kirbyREye = document.getElementById("kirby-eye-right");
 let kirbyLEye = document.getElementById("kirby-eye-left");
 let closedREye = document.getElementById("close-eye-right");
@@ -128,6 +129,23 @@ function moveKirbyArms(duration){
     );
 }
 
+function moveStationaryShadow(duration){
+    kirbyShadow.animate(
+        [
+            {transform:'scale(1)', offset: 0},
+            {transform:'scale(.9)', offset: .4},
+            {transform:'scale(.9)', offset: .5},
+            {transform:'scale(1)', offset: .95},
+            {transform:'scale(1)', offset: 1}
+        ],
+        {
+            duration: duration,
+            iterations: Infinity,
+            easing: 'linear'
+        }
+    );
+}
+
 function kirbyBlink(){
     //blinking movements
     closeEyes(kirbyREye,kirbyLEye,closedLEye,closedREye);
@@ -156,6 +174,7 @@ function kirbyMotion(){
     moveKirbyArms(2000);
     moveKirbyBody(2000);
     moveKirbyLegs(2000);
+    moveStationaryShadow(2000);
     setInterval(function(){kirbyBlink();}, 2000);
 }
 
@@ -207,6 +226,16 @@ function kirbyStartJumpPosition(){
         [
             {transform:'rotate(0deg)', offset: 0},
             {transform:'rotate(0deg)', offset: 1}
+        ],
+        {
+            duration: duration,
+            easing: 'linear'
+        }
+    );
+    kirbyShadow.animate(
+        [
+            {transform:'scale(1)', offset: 0},
+            {transform:'scale(1)', offset: 1}
         ],
         {
             duration: duration,
@@ -282,9 +311,23 @@ function kirbyJumping(duration){
             easing: 'linear'
         }
     );
+    kirbyShadow.animate(
+        [
+            {transform:'scale(1)', offset: 0},
+            {transform:'scale(.5)', offset: .3},
+            {transform:'scale(.4)', offset: .5},
+            {transform:'scale(.7)', offset: .7},
+            {transform:'scale(1)', offset: 1}
+        ],
+        {
+            duration: duration,
+            easing: 'linear'
+        }
+    );
 }
 
 function moveCoinBox(duration){
+    //movement of coinbox when it is hit
     coinBox.animate([
         {transform:'translateY(0vh)', offset: 0},
         {transform:'translateY(0vh)', offset: .25},
@@ -318,6 +361,7 @@ function moveCoin(duration){
 
 
 function reminderCoinsSpin(coin){
+    //spinning transition when score coins show up
     coin.animate([
         {transform:'rotateY(0deg)', offset: 0},
         {transform:'rotateY(360deg)', offset: .075},
