@@ -2,7 +2,7 @@
 Making a web page where you can flip a coin and it comes up heads or tails .
 
 ## Getting Started
-Make sure you have a browser open. Optimal window hieght is 640px.
+Make sure you have a browser open. Optimal window hieght is 640px. Works for desktop and mobile (only andriods).
 
 ## How to Play the Game:
 
