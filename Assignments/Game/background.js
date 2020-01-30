@@ -8,13 +8,13 @@ function makeCloudsFloat(){
             cloudArray[i].animate(
                 [
                     {transform:'translate(0vw, 0vh)', offset: 0},
-                    {transform:'translate(1vw, 2vh)', offset: 0.25},
-                    {transform:'translate(2vw, 0vh)', offset: 0.5},
-                    {transform:'translate(1vw, 1vh)', offset: 0.75},
+                    {transform:'translate(4vw, 4vh)', offset: 0.25},
+                    {transform:'translate(6vw, 0vh)', offset: 0.5},
+                    {transform:'translate(4vw, 4vh)', offset: 0.75},
                     {transform:'translate(0vw, 0vh)', offset: 1}
                 ],
                 {
-                    duration: 5000,
+                    duration: 6000,
                     iterations: Infinity,
                     easing: 'linear'
                 }
@@ -23,13 +23,13 @@ function makeCloudsFloat(){
             cloudArray[i].animate(
                 [
                     {transform:'translate(0vw, 0vh)', offset: 0},
-                    {transform:'translate(1vw, -1vh)', offset: 0.25},
-                    {transform:'translate(2vw, 0vh)', offset: 0.5},
-                    {transform:'translate(1vw, -1vh)', offset: 0.75},
+                    {transform:'translate(2vw, -4vh)', offset: 0.25},
+                    {transform:'translate(4vw, 0vh)', offset: 0.5},
+                    {transform:'translate(2vw, -4vh)', offset: 0.75},
                     {transform:'translate(0vw, 0vh)', offset: 1}
                 ],
                 {
-                    duration: 5000,
+                    duration: 6000,
                     iterations: Infinity,
                     easing: 'linear'
                 }
@@ -50,8 +50,8 @@ function makeBushShake(){
             {transform:'translateX(0px) rotate(0deg)', offset: 1}
         ],
          {
-            duration: 500,
-            iterations: 2,
+            duration: 250,
+            iterations: 4,
             easing: 'linear'
         }
     );

@@ -30,6 +30,14 @@ function flipCoin(){
                     kirbyStartJumpPosition();
                 }, 0);
             });
+            document.addEventListener("touchstart",function(){
+                clickDown = setInterval(function(){
+                    kirbyStartJumpPosition();
+                }, 0);
+                document.addEventListener("touchend",function(){
+                    clearInterval(clickDown);
+                });
+            });
         }
     }
     
@@ -244,8 +252,8 @@ function kirbyStartJumpPosition(){
     );
     kirbyShadow.animate(
         [
-            {transform:'scale(1)', offset: 0},
-            {transform:'scale(1)', offset: 1}
+            {transform:'scale(1.2) translateX(-2px)', offset: 0},
+            {transform:'scale(1.2) translateX(-2px)', offset: 1}
         ],
         {
             duration: duration,
