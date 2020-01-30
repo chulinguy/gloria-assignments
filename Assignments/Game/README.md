@@ -5,7 +5,11 @@ Making a web page where you can flip a coin and it comes up heads or tails .
 Make sure you have a browser open. Optimal window hieght is 640px.
 
 ## How to Play the Game:
-#### Demo
+
+### Game
+https://grunuffygit.github.io/
+
+### Demo
 ![demo](demo.gif)
 
 -Game prompt will ask you how many coins you want to flip. You can only flip 40 coins max. (There is a limit.)
