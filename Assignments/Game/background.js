@@ -44,9 +44,9 @@ function makeBushShake(){
     bushesArray[randoBushShake].animate(
         [
             {transform:'translateX(0px) rotate(0deg)', offset: 0},
-            {transform:'translateX(1px) rotate(2deg)', offset: 0.25},
-            {transform:'translateX(3px) rotate(-2deg)', offset: 0.5},
-            {transform:'translateX(1px) rotate(2deg)', offset: 0.75},
+            {transform:'translateX(4px) rotate(2deg)', offset: 0.25},
+            {transform:'translateX(10px) rotate(-2deg)', offset: 0.5},
+            {transform:'translateX(4px) rotate(2deg)', offset: 0.75},
             {transform:'translateX(0px) rotate(0deg)', offset: 1}
         ],
          {
