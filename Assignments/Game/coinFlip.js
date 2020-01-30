@@ -17,9 +17,19 @@ function flipCoin(){
     if(event.target.id === "inputBtn"){
         let coinArray = [];
         let coinFlipVal = document.getElementById("coinsToFlip").value;
+        let clickDown;
         if(checkingflipNum(coinFlipVal)){
             document.addEventListener("keyup",function(){hitCoinBox(coinArray, coinFlipVal)});
+            document.addEventListener("mouseup",function(){
+                clearInterval(clickDown);
+                hitCoinBox(coinArray, coinFlipVal);
+            });
             document.addEventListener("keydown",kirbyStartJumpPosition);
+            document.addEventListener("mousedown",function(){
+                clickDown = setInterval(function(){
+                    kirbyStartJumpPosition();
+                }, 0);
+            });
         }
     }
     
@@ -180,7 +190,7 @@ function kirbyMotion(){
 
 function kirbyStartJumpPosition(){
     //starting position of the jump
-    let duration = 500;
+    let duration = 1000;
     closeEyes(kirbyREye,kirbyLEye,closedLEye,closedREye);
     kirbyBody.animate(
         [
