@@ -26,7 +26,6 @@ class Event {
     }
 
     searchTickets(lower,upper){
-        console.log(lower+","+upper);
         let priceRangeTickets = "";
         $.each(this.availableTickets, function(index, item){
             if(item.price>=lower && item.price<=upper){
@@ -54,10 +53,12 @@ $(document).ready(function() {
         min: 0, //min range of the slider
         max: 300, //max range of the slider
         values: [0,300], //what are the starting values of the slider
-        slide: function(event, ui ) { //displaying the values when changing the slider
-            $("#amount").html( `Min $: ${ui.values[0]} Max $$$: ${ui.values[1]}` );
+        slide: function(event, ui){ //displaying the values when changing the slider
+            $("#amount").html(`Min $: ${ui.values[0]} Max $$$: ${ui.values[1]}`);
         }
     });
+    
+    $("#amount").html(`Min $: ${$('#slideRange').slider("values")[0]} Max $$$: ${$('#slideRange').slider("values")[1]}`); //display values initially when page is first loaded
     
     $("#submit").on('click', function(){ //displaying avaiable tix depending on price set from slider
         $("#event").html(""); //reseting the HTML of the element to be empty
