@@ -49,11 +49,11 @@ eventArray.push(eventObj1, eventObj2, eventObj3);
 $(document).ready(function() {
     let html = "";
     $("#slideRange").slider({
-        range: true,
+        range: true, //slide is going to represent a range
         min: 0, //min range of the slider
         max: 300, //max range of the slider
-        values: [0,300], //what are the starting values of the slider
-        slide: function(event, ui){ //displaying the values when changing the slider
+        values: [0,300], //initializing the slider with these values
+        slide: function(event, ui){ //slide is an event, does this function every time you slide
             $("#amount").html(`Min $: ${ui.values[0]} Max $$$: ${ui.values[1]}`);
         }
     });
