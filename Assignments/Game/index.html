@@ -4,28 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="coinFlip.css"></link>
+    <link rel="stylesheet" href="background.css"></link>
     <title>Coin Flip</title>
 </head>
 <body>
     <div class="gameModal">
-        <div class ="modalContent">
-            <h1>How many coins to flip?</h1>
-            <input type="text" id="coinsToFlip">
+        <div class="modalContent">
+            <h1 id="gamePrompt">How many coins to flip?</h1>
+            <input type="text" id="coinsToFlip" maxlength="2" size="4">
+            <br>
             <button id="inputBtn">Submit</button>
             <div id="errorMsg"></div>
         </div>
     </div>
     <div class="endGameModal">
-        <div class ="endModalContent">
-            <h1>Play Again?</h1>
+        <div class ="modalContent">
+            <h1 id="gamePrompt">Play Again?</h1id="gamePrompt">
             <button id="YesBtn">Yes</button>
         </div>
     </div>
     <div class="gameBody">
-        <h1 id="gameHeader">Press Any Button</h1>
+        <h1 id="gameHeader">Press Anything!</h1>
         <div class="coin">
-            <div id="coinBox"></div>
-            <div id="coinHT"></div>
+            <div id="coinBox">
+                <div id="plack">
+                    <div id="Q">?</div>
+                </div>
+                <div class="screw" id="screw1"></div>
+                <div class="screw" id="screw2"></div>
+                <div class="screw" id="screw3"></div>
+                <div class="screw" id="screw4"></div>
+            </div>
+            <div id="coinHT">
+                <div id="innerCoin"></div>
+            </div>
         </div>
         <div class="reminders"></div>
         <div class="character">
@@ -42,8 +54,50 @@
             <div id="arm-left"></div>
             <div id="leg-right"></div>
             <div id="leg-left"></div>
+            <div id="shadow"></div>
+        </div>
+    </div>
+    <div class="background">
+        <div class="mountain" id="m1">
+            <div id="ice"></div>
+        </div>
+        <div class="mountain" id="m2">
+            <div id="ice"></div>
+        </div>
+        <div class="mountain" id="m3">
+            <div id="ice"></div>
+        </div>
+        <div class="mountain" id="m4">
+            <div id="ice"></div>
+        </div>
+        <div class="mountain" id="m5">
+            <div id="ice"></div>
+        </div>
+        <div class="mountain" id="m6">
+            <div id="ice"></div>
+        </div>
+        <div class="cloud" id="c1"></div>
+        <div class="cloud" id="c2"></div>
+        <div class="cloud" id="c3"></div>
+        <div class="cloud" id="c4"></div>
+        <div class="cloud" id="c5"></div>
+        <div class="cloud" id="c6"></div>
+        <div class="cloud" id="c1a"></div>
+        <div class="cloud" id="c4b"></div>
+        <div class="ground">
+            <div class="bushes" id="b1"></div>
+            <div class="bushes" id="b2"></div>
+            <div class="bushes" id="b3"></div>
+            <div class="bushes" id="b4"></div>
+            <div class="bushes" id="b5"></div>
+            <div class="bushes" id="b6"></div>
+            <div class="bushes" id="b7"></div>
+            <div class="bushes" id="b8"></div>
+            <div class="bushes" id="b9"></div>
+            <div class="bushes" id="b10"></div>
         </div>
     </div>
 </body>
 <script src="coinFlip.js"></script>
+<script src="background.js"></script>
 </html>
