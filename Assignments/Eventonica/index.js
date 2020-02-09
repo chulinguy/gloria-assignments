@@ -44,7 +44,6 @@ class EventRecommender {
         //finding the event obj in the event array and storing it into a variable
         const userIndex = this.AllUsers.findIndex(userN => userN.user === user);
         //finding the user's obj index in the users obj array 
-        console.log(eventToAdd);
         this.AllUsers[userIndex].userEvents.push(eventToAdd);
         //pushing the event obj into the user's obj's event array by using the found index of the user's obj in AllUsers array
     }
@@ -57,11 +56,11 @@ class EventRecommender {
         //removing 1 element starting from userIndex #
     }
    
-    deleteEvent(eventName) {
-    // Deletes the Event from the system
-    const eventIndex = this.AllEvents.findIndex(eventN => eventN.eventName === eventName);
+    deleteEvent(array,eventName) {
+    // Deletes the Event from any event array
+    const eventIndex = array.findIndex(eventN => eventN.eventName === eventName);
     //finding the event obj index in the event obj array
-    this.AllEvents.splice(eventIndex, 1);
+    array.splice(eventIndex, 1);
     //removing 1 element starting from eventIndex #
     }
 
@@ -124,3 +123,4 @@ Want List:
 // console.log(eventR.findEventsbyCategory("pop"));
 
 
+module.exports = { EventRecommender, User, Event};
